@@ -25,7 +25,7 @@ TREE_SITTER_DIR = File.expand_path(File.join(File.dirname(__FILE__), 'tree-sitte
 TREE_SITTER_INCLUDE_DIR = File.join(TREE_SITTER_DIR, 'include')
 TREE_SITTER_SRC_DIR = File.join(TREE_SITTER_DIR, 'src')
 
-BUNDLE_PATH = File.join(ROOT, 'lib', 'tree-sitter', "treesitter.#{DLEXT}")
+BUNDLE_PATH = ENV.fetch('TREE_SITTER_BUNDLE_PATH', File.join(ROOT, 'lib', 'tree-sitter', "treesitter.#{DLEXT}"))
 
 HEADER_DIRS = [INCLUDEDIR, TREE_SITTER_INCLUDE_DIR]
 LIB_DIRS = [LIBDIR, OUT_DIR]
